@@ -1,163 +1,109 @@
-...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>YouTube Channel Tooltip Exercise</title>
+  <style>
+    body {
+      font-family: Roboto, Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
 
-      <div class="video-preview">
-        ...
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <div class="profile-picture-container">
-              <a href="https://youtube.com/c/mkbhd" target="_blank">
-                <img class="profile-picture" src="channel-pictures/channel-1.jpeg">
-              </a>
-              <div class="channel-tooltip">
-                <img class="channel-tooltip-picture" src="channel-pictures/channel-1.jpeg">
-                <div>
-                  <div class="channel-tooltip-name">
-                    Marques Brownlee
-                  </div>
-                  <div class="channel-tooltip-stats">
-                    15M subscribers
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          ...
-        </div>
+    /* Container wrapper setup */
+    .profile-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Channel Profile Picture */
+    .profile-picture {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: block;
+    }
+
+    /* Tooltip popup box (Hidden by default) */
+    .tooltip {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 12px 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+      white-space: nowrap;
+      
+      /* Smooth fade-in hover animation */
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease-in-out;
+      z-index: 100;
+    }
+
+    /* Picture inside the tooltip popup */
+    .tooltip-picture {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 14px;
+    }
+
+    /* Info layout inside tooltip */
+    .tooltip-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tooltip-name {
+      font-weight: bold;
+      font-size: 16px;
+      color: #0f0f0f;
+      margin-bottom: 2px;
+    }
+
+    .tooltip-stats {
+      font-size: 14px;
+      color: #606060;
+    }
+
+    /* Hover effect: reveals the tooltip */
+    .profile-container:hover .tooltip {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Channel Picture with Tooltip Hover -->
+  <div class="profile-container">
+    <img class="profile-picture" src="https://picsum.photos/id/64/100/100" alt="Channel Picture">
+    
+    <!-- Tooltip Popup -->
+    <div class="tooltip">
+      <img class="tooltip-picture" src="https://picsum.photos/id/64/100/100" alt="Channel Picture">
+      <div class="tooltip-info">
+        <div class="tooltip-name">Markiplier</div>
+        <div class="tooltip-stats">30M subscribers</div>
       </div>
-
-...
-
-      <div class="video-preview">
-        ...
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <div class="profile-picture-container">
-              <a href="https://youtube.com/c/markiplier" target="_blank">
-                <img class="profile-picture" src="channel-pictures/channel-2.jpeg">
-              </a>
-              <div class="channel-tooltip">
-                <img class="channel-tooltip-picture" src="channel-pictures/channel-2.jpeg">
-                <div>
-                  <div class="channel-tooltip-name">
-                    Markiplier
-                  </div>
-                  <div class="channel-tooltip-stats">
-                    30M subscribers
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          ...
-        </div>
+    </div>
+  </div>
+  <div class="profile-container">
+    <img class="profile-picture" src="https://picsum.photos/id/64/100/100" alt="Channel Picture">
+    
+    <!-- Tooltip Popup -->
+    <div class="tooltip">
+      <img class="tooltip-picture" src="https://picsum.photos/id/64/100/100" alt="Channel Picture">
+      <div class="tooltip-info">
+        <div class="tooltip-name">Markiplier</div>
+        <div class="tooltip-stats">30M subscribers</div>
       </div>
+    </div>
+  </div>
 
-...
-
-      <div class="video-preview">
-        ...
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <div class="profile-picture-container">
-              <a href="https://youtube.com/c/SSSniperWolf" target="_blank">
-                <img class="profile-picture" src="channel-pictures/channel-3.jpeg">
-              </a>
-              <div class="channel-tooltip">
-                <img class="channel-tooltip-picture" src="channel-pictures/channel-3.jpeg">
-                <div>
-                  <div class="channel-tooltip-name">
-                    SSSniperWolf
-                  </div>
-                  <div class="channel-tooltip-stats">
-                    31M subscribers
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          ...
-        </div>
-      </div>
-
-...
-
-      <div class="video-preview">
-        ...
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <div class="profile-picture-container">
-              <a href="https://youtube.com/c/veritasium" target="_blank">
-                <img class="profile-picture" src="channel-pictures/channel-4.jpeg">
-              </a>
-              <div class="channel-tooltip">
-                <img class="channel-tooltip-picture" src="channel-pictures/channel-4.jpeg">
-                <div>
-                  <div class="channel-tooltip-name">
-                    veritasium
-                  </div>
-                  <div class="channel-tooltip-stats">
-                    11.5M subscribers
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          ...
-        </div>
-      </div>
-
-...
-
-      <div class="video-preview">
-        ...
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <div class="profile-picture-container">
-              <a href="https://youtube.com/c/CSDojo" target="_blank">
-                <img class="profile-picture" src="channel-pictures/channel-5.jpeg">
-              </a>
-              <div class="channel-tooltip">
-                <img class="channel-tooltip-picture" src="channel-pictures/channel-5.jpeg">
-                <div>
-                  <div class="channel-tooltip-name">
-                    CS Dojo
-                  </div>
-                  <div class="channel-tooltip-stats">
-                    1.79M subscribers
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          ...
-        </div>
-      </div>
-
-...
-
-      <div class="video-preview">
-        ...
-        <div class="video-info-grid">
-          <div class="channel-picture">
-            <div class="profile-picture-container">
-              <a href="https://youtube.com/c/MrBeast6000" target="_blank">
-                <img class="profile-picture" src="channel-pictures/channel-6.jpeg">
-              </a>
-              <div class="channel-tooltip">
-                <img class="channel-tooltip-picture" src="channel-pictures/channel-6.jpeg">
-                <div>
-                  <div class="channel-tooltip-name">
-                    MrBeast
-                  </div>
-                  <div class="channel-tooltip-stats">
-                    90.6M subscribers
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          ...
-        </div>
-      </div>
-
-...
+</body>
+</html>
